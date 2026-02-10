@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<div id="confetti"></div>
+
+<body>
+
+<canvas id="stars"></canvas>
+
+<div class="container">
+
+  <!-- SPEL -->
+  <div id="start">
+    <h1>Kärleksspelet</h1>
+    <p>Tryck mellanslag för att starta,
+      använd pilarna för att röra dig
+    </p>
+    <p>Om du dör, refresh hemsidan</p>
+    <canvas id="game" width="400" height="400"></canvas>
+    <p id="info">Poäng: 0 / 10</p>
+  </div>
+
+  <!-- QUIZ -->
+   <!-- Quiz-intro -->
+<div id="quizIntro" class="hidden">
+  <h1>Quiz</h1>
+  <p>Nu börjar quizet! Klicka på start när du är redo.</p>
+  <button onclick="startQuiz()">Starta Quiz</button>
+</div>
+
+  <div id="quiz" class="hidden">
+    <h1>Quiz</h1>
+    <p id="question"></p>
+    <div id="answers"></div>
+  </div>
+
+  <!-- FINAL -->
+  <div id="final" class="hidden">
+    <div id="final-content">
+      <h1>Du har nu klarat testet</h1>
+      <p>Vill du bli mitt hjärta idag?</p>
+      <div id="finalButtons">
+        <button id="yesBtn">Ja</button>
+        <button id="noBtn">Nej</button>
+      </div>
+      <p id="finalText"></p>
+    </div>
+
+    <div id="success-message" class="hidden">
+      <img src="bild.JPG" alt="Kärlek" id="love-img">
+      <h1>Jipppiii</h1>
+      <p>Du är bäst! Puss</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Ljudfiler -->
+<audio id="snakeSound" src="sounds/snake.mp3"></audio>
+<audio id="finalSound" src="sounds/final.mp3"></audio>
+<audio id="yesSound" src="sounds/ljud.mp4"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
